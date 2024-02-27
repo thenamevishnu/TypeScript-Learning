@@ -97,4 +97,13 @@ function add(num1: any, num2: any) {
 }
 
 add(10, 10)
-add("10","10")
+add("10", "10")
+
+// Generics
+
+function getAge<T>(age: T): T {
+    return age
+}
+
+getAge<number>(22)
+getAge<string>("22")
