@@ -16,3 +16,20 @@ let userInfo: { name: string, age: number, isActive: boolean, isPremium?: boolea
     age: 20,
     isActive: true
 } // isPremium is optional
+
+// Interface
+
+interface Details {
+    name: string;
+    age: number;
+}
+
+let userData: Details = {
+    name: "VishnuMK",
+    age: 20
+}
+
+let adminData: Details = {
+    name: "VishnuMK",
+    age: 22
+}
