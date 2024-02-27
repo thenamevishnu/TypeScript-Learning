@@ -63,3 +63,20 @@ let userInfo3: Detail = {
     age: "20"
 }
 
+// Function
+
+const getUserName = (userInfo: Detail): string => {
+    return userInfo.name
+}
+
+type getUserData = {
+    name: string;
+    age: number | string;
+}
+
+const getUserName2 = (userInfo: Detail): getUserData => {
+    return {
+        name: userInfo.name,
+        age: userInfo.age
+    }
+}
