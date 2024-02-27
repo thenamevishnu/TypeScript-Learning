@@ -107,3 +107,17 @@ function getAge<T>(age: T): T {
 
 getAge<number>(22)
 getAge<string>("22")
+
+// enum
+
+enum StatusTypes {
+    PENDING = 100,
+    COMPLETED,
+    REJECTED
+}
+
+function getStatus(id: number, status: StatusTypes) {
+    console.log(id + "==" + status);
+}
+
+getStatus(1000, StatusTypes.PENDING)
