@@ -126,3 +126,16 @@ getStatus(1000, StatusTypes.PENDING)
 
 let myName = "VishnuMK" as const
 
+//keyof typeof
+
+const StatusTypeObj = {
+    PENDING: "Pending",
+    COMPLETED: "Completed",
+    REJECTED: "Rejected"
+} as const
+
+function getOrderStatus(id: number, status: keyof typeof StatusTypeObj) {
+    console.log(id + "==" + StatusTypeObj[status])
+}
+
+getOrderStatus(10, "COMPLETED")
