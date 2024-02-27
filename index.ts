@@ -139,3 +139,58 @@ function getOrderStatus(id: number, status: keyof typeof StatusTypeObj) {
 }
 
 getOrderStatus(10, "COMPLETED")
+
+// Utility Types
+
+type Users = {
+    name: string;
+    age: number;
+    salary: number;
+}
+
+type UsersReadOnlyName = {
+    readonly name: string;
+    age: number;
+}
+
+const userSample: UsersReadOnlyName = {
+    name: "hey",
+    age: 20
+}
+
+// userSample.name = "20" => Cannot assign to 'name' because it is a read-only property.
+
+const userInfo1: Readonly<Users> = {
+    name: "Vishnu",
+    age: 22,
+    salary: 1000
+} // All fields are readonly
+
+const usersInfo1: Partial<Users> = {
+    name: "vishnu"
+} // All fields are optional
+
+const usersInfo2: Required<Users> = {
+    name: "vishnu",
+    age: 20,
+    salary: 2000
+} // All fields are required
+
+const usersInfo3: Pick<Users, "name" | "age"> = {
+    name: "vishnu",
+    age: 22
+}
+
+const usersInfo4: Omit<Users, "salary"> = {
+    name: "vishnu",
+    age: 22
+}
+
+const statusCheck: Exclude<StatusType, "pending"> = "completed"
+
+type Food = Record<string, any>
+
+const food: Food = {
+    name: "Chicken",
+    price: 230
+}
