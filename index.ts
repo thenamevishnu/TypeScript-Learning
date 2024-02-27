@@ -69,14 +69,21 @@ const getUserName = (userInfo: Detail): string => {
     return userInfo.name
 }
 
-type getUserData = {
+type GetUserData = {
     name: string;
     age: number | string;
 }
 
-const getUserName2 = (userInfo: Detail): getUserData => {
+const getUserName2 = (userInfo: Detail): GetUserData => {
     return {
         name: userInfo.name,
         age: userInfo.age
     }
 }
+
+// Named Types
+
+type StatusType = "pending" | "completed" | "rejected"
+
+const currentStatus: StatusType = "pending"
+
