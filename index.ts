@@ -46,3 +46,20 @@ let usersInfo: Info = {
     age: 22
 }
 
+// Union
+
+interface Detail {
+    name: string;
+    age: number | string;
+}
+
+let userInfo2: Detail = {
+    name: "VishnuMK",
+    age: 20
+}
+
+let userInfo3: Detail = {
+    name: "VishnuMK",
+    age: "20"
+}
+
