@@ -121,3 +121,8 @@ function getStatus(id: number, status: StatusTypes) {
 }
 
 getStatus(1000, StatusTypes.PENDING)
+
+// as const
+
+let myName = "VishnuMK" as const
+
