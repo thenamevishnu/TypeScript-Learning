@@ -24,12 +24,25 @@ interface Details {
     age: number;
 }
 
-let userData: Details = {
+let userDetails: Details = {
     name: "VishnuMK",
     age: 20
 }
 
-let adminData: Details = {
+let adminDetails: Details = {
     name: "VishnuMK",
     age: 22
 }
+
+// Type
+
+type Info = {
+    name: string;
+    age: number;
+}
+
+let usersInfo: Info = {
+    name: "VishnuMK",
+    age: 22
+}
+
