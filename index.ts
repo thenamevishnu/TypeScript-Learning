@@ -87,3 +87,14 @@ type StatusType = "pending" | "completed" | "rejected"
 
 const currentStatus: StatusType = "pending"
 
+// Function Overloading
+
+function add(num1: number, num2: number): number;
+function add(num1: string, num2: string): string;
+
+function add(num1: any, num2: any) {
+    return num1 + num2
+}
+
+add(10, 10)
+add("10","10")
